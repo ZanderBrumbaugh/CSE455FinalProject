@@ -38,9 +38,3 @@ class DepthDataset(torch.utils.data.Dataset):
             img = transform(img)
 
         return img, depth
-  
-data = DepthDataset(r"C:\Users\makin\Downloads\bookstore_part1\bookstore_0001a\data")
-loader = DataLoader(data, batch_size=64, shuffle=True)
-train_imgs, train_depths = next(iter(loader))
-# print(f"Image batch shape: {train_imgs.size()}")
-# print(f"Depth map batch shape: {train_depths.size()}")
