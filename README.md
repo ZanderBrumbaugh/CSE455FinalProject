@@ -2,7 +2,7 @@
 ### Group Members: Yegor Kuznetsov, Zander Brumbaugh, Colton Jobes
 
 ## Project Summary
-Our project aims to test our hypothesis that depth information can be reliably predicted from the latent representation from an autoencoder, thus proving depth information is learned by the autoencoder when training. We additionally compare the accuracy of our prediction with a convolutional neural network (CNN) trained explicitly to predict depth information from an image to determine the extent of which depth information is used in the autoencoder. Furthermore, we propose a two-parameter, generalized framework to determine whether a feature is implicitly learned given a feature and computer vision task.
+Our project aims to test our hypothesis that depth information can be reliably predicted from the latent representation from an autoencoder, thus proving depth information is learned by the autoencoder when training. We additionally compare the accuracy between several models in order to provide further evidence in support of our hypothesis. Furthermore, we propose a two-parameter, generalized framework to determine whether a feature is implicitly learned given a feature and computer vision task.
 
 ## Datasets
 We used the Diode dataset (Vasiljevic et al., 2019) and NYU Depth V2 dataset (Silberman et al., 2012). The NYU data was provided in a .mat format which we then preprocessed into a useable format with Python and later a Dataset object for use with PyTorch. We used this set for development as it was considerably smaller than the Diode dataset but consequently had lower in image and depth map resolution. We then trained our final model on the images and depth maps from the Diode dataset.
