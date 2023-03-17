@@ -21,4 +21,7 @@ Both the autoencoder approach and using the pretrained frozen ConvNeXT+probe sig
 
 ## Discussion
 We believe that we would have been able to produce even stronger evidence that depth information is implicitly learned by CNNs on 3D datasets if we explored the possible model or task space further.
-Because our hypothesis was true, we propose a generalized framework for proving that a specified feature is learned in the training of a given computer vision task.  This framework requires only a dataset with the ground truth data for the feature you wish to know is implicitly learned and the encoded input from the model for the task.
+
+Because our hypothesis was true, we propose a generalized framework for proving that a specified feature is learned in the training of a given computer vision task.  This framework requires only a dataset with the ground truth data for the feature you wish to know is implicitly learned and the encoded input from the model for the task. By training a simple probe to fit a task which a model is not originally trained for, one could explore the interaction of the model and data. 
+
+Additionally, one could consider the main task of a CNN training on image data as conditionally dependent on a set of auxillary tasks (such as depth map prediction), which is why we believe the hypothesis is a reasonable position to hold.
