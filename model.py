@@ -59,10 +59,10 @@ class Encoder(nn.Module):
     n_hid:           int = 256
     n_blk_per_group: int = 2
     input_channels:  int = 3
-    output_channels: int = 10
+    output_channels: int = attr.ib(default=10)
 
     device:          torch.device = torch.device('cpu')
-    requires_grad:   bool         = False
+    requires_grad:   bool         = attr.ib(default=False)
 
     def __attrs_post_init__(self) -> None:
         super().__init__()
@@ -145,11 +145,10 @@ class Decoder(nn.Module):
     n_hid:           int = 256
     n_blk_per_group: int = 2
     output_channels: int = 3
-    input_channels:  int = 10
+    input_channels:  int = attr.ib(default=10)
 
     device:              torch.device = torch.device('cpu')
-    requires_grad:       bool         = False
-    use_mixed_precision: bool         = True
+    requires_grad:       bool         = attr.ib(default=False)
 
     def __attrs_post_init__(self) -> None:
         super().__init__()
